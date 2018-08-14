@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">SOKO</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="http://oa1idu8sf.bkt.clouddn.com/%E5%AE%8B%E6%B5%A9%E7%84%B6.jpg" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/sokonen" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://oa1idu8sf.bkt.clouddn.com/AJAX.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >AJAX和JSONP</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>创建<br>new ActiveXObject(“microsoft.xmlhttp”);<br>new XNLHttpRequest();</p>
+<p>监听<br>ajax.onreadystatechange<br>    其中<br>    ——readyState 存放着XMLHttpRequest的状态<br>        0：请求未初始化<br>        1：服务器连接已经建立<br>        2：请求已经接受<br>        3：请求处理中<br>        4：请求处理完毕，相应已经就绪<br>    ——status<br>        200：“OK”<br>        404：未找到页面<br>    可见当readyState==4且status==200时表示响应就绪<br>    即<br>    ···<br>    if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>        /code/<br>    }<br>    ···<br>    服务端返回的数据——xmlhttp.responsetext<br>    ——ajax.open()<br>        其中第一个参数为提交方式（post|get）<br>        第二个参数为路径url<br>    ——ajax.send()<br>        提交方式为get时参数为null<br>        提交方式为post时用来传递参数<br>        此时需要设定头部信息<br>        ajax.setRequestHeder(“Content-Type”,”application/x-www-form-urlencoded;charset=UTF-8”);<br>        ajax.send(“username=”+username+”&amp;password=”+password);</p>
+<p>JSONP<br>出于浏览器同源策略规定，ajax无法进行跨域请求，但是html标签中的src属性确允许进行跨域操作<br>利用这一特性通过script标签返回一个带参数的函数调用。<br>前端js实现<br>        var src = ‘<a href="http://127.0.0.1:8080/jsonp?callback=test&amp;namevl=abc&#39;；" target="_blank" rel="noopener">http://127.0.0.1:8080/jsonp?callback=test&amp;namevl=abc&#39;；</a><br>        var script = document.createElement(‘script’);<br>        script.setAttribute(‘type’, ‘text/javascript’);<br>        script.src = src;<br>        document.body.appendChild(script);<br>通过body中的脚本文件动态向body中添加script标签，并通过标签请求路径返回的内容调用本地全局函数。<br>node服务器<br>        解析字符串后取得相应信息并返回需求的函数和参数。<br>        使用querystring<br>            var qs = querystring.parse(req.url.split(‘?’)[1]);<br>            其中 qs.callback = test<br>                qs.namevl = abc<br>            var data = {<br>                “name”: qs.namevl<br>            };<br>            data = JSON.stringify(data);<br>            var callback = qs.callback + ‘(‘+data+‘);’;<br>            res.end(callback);</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 valine -->
+<div id="comment">
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        notify: true,
+        verify: false,
+        app_id: 'your appId',
+        app_key: 'your appkey',
+        placeholder: 'Please leave your footprints',
+        pageSize: '10',
+        avatar: '',
+        avatar_cdn: 'https://gravatar.loli.net/avatar/'
+    });
+</script>
+</div>
+<style>
+   #comment{
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
